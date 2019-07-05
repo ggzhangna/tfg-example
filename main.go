@@ -19,7 +19,6 @@ type req struct {
 	s string
 }
 
-
 /**
  * req : in => 请求读出来的字节    lastRemain => 上一次read 操作没有处理完的数据
  *
