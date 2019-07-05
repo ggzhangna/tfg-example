@@ -60,6 +60,7 @@ func main() {
 		log.Errorf("new server [err:%v]", err)
 		return
 	}
+	log.Infof("server start :%v", "6000")
 	if err := s.Serve(); err != nil {
 		log.Errorf("serve [err:%v]", err)
 		return
