@@ -5,12 +5,13 @@ TARGET_PKG=$(PROJECT_PKG)
 IMAGE_PREFIX=tfg
 TARGET_IMAGE=$(IMAGE_PREFIX)/$(TARGET):0.0.1
 TARGET_IMAGE_PRD=$(IMAGE_PREFIX)/$(TARGET)-prd:0.0.1
+CMD_PATH="cmd/echo/main.go"
 
 all:image
 
 binary:
 	CGO_ENABLED=0 go build -mod vendor  -ldflags "-X main.version=$(GITVERSION)" \
-    	 -o dist/$(TARGET) main.go
+    	 -o dist/$(TARGET) $(CMD_PATH)
 
 target:
 	mkdir -p $(PROJECT_ROOT)/dist
@@ -34,6 +35,7 @@ push-prd:
 
 dev:image clean
 	docker run -it --rm   -p 6000:6000 $(TARGET_IMAGE)  $(TARGET)
+
 clean:
 	rm -rf dist
 
