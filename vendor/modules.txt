@@ -1,0 +1,10 @@
+# github.com/konsorten/go-windows-terminal-sequences v1.0.1
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/panjf2000/ants v3.9.9+incompatible
+github.com/panjf2000/ants
+# github.com/scriptllh/tfg v0.0.0-20190705102514-a05db5204ae6
+github.com/scriptllh/tfg
+# github.com/sirupsen/logrus v1.4.2
+github.com/sirupsen/logrus
+# golang.org/x/sys v0.0.0-20190618155005-516e3c20635f
+golang.org/x/sys/unix
