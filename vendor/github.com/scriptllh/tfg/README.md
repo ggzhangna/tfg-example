@@ -1,16 +1,15 @@
 <h1 align="center">Welcome to tfg 👋</h1>
 
 
-> tfg
 
 ### 🏠 [Homepage](https://github.com/scriptllh/tfg)
 
 ## Install
 
-
 ```sh
 go get -u github.com/scriptllh/tfg
 ```
+
 
 ## Usage
 
@@ -80,7 +79,7 @@ func main() {
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page]().
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/scriptllh/tfg/issues).
 
 ## Show your support
 
