@@ -27,13 +27,13 @@ type req struct {
  *         如果为true => 则下次数据不会带上remain，且下次read是下一个协程来处理
  *    isHandle => 是否有数据packet给handle执行 ，因为handle是异步执行的
  */
-func (hc *HandleConn) Read(in []byte, lastRemain []byte) (packet interface{}, remain []byte, isFinRead bool, isHandle bool) {
+func (hc *HandleConn) Read(in []byte, lastRemain []byte) (packet interface{}, remain []byte, isFinRead bool, isHandle bool, err error) {
 	s := string(in)
 	req := &req{
 		s: s,
 	}
 	log.Infof("read [data:%v]", req)
-	return req, nil, false, true
+	return req, nil, false, true, nil
 }
 
 /**
@@ -41,7 +41,7 @@ func (hc *HandleConn) Read(in []byte, lastRemain []byte) (packet interface{}, re
  *
  */
 
-func (hc *HandleConn) Handle(conn tfg.Conn, packet interface{}) {
+func (hc *HandleConn) Handle(conn tfg.Conn, packet interface{}, err error) {
 	req := packet.(*req)
 	log.Infof("handle req [data:%v]", req)
 	time.Sleep(time.Millisecond * time.Duration(10))

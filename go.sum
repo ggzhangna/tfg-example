@@ -6,10 +6,10 @@ github.com/panjf2000/ants v3.9.9+incompatible h1:a0haTPE3Gyp4TBe7M/FvciKq2zeI9OD
 github.com/panjf2000/ants v3.9.9+incompatible/go.mod h1:AaACblRPzq35m1g3enqYcxspbbiOJJYaxU2wMpm1cXY=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/scriptllh/tfg v0.0.0-20190705102514-a05db5204ae6 h1:8RfgOhYFlsUSHYgReA5bEKWuCvKDsirH8f1i2RMP0X8=
-github.com/scriptllh/tfg v0.0.0-20190705102514-a05db5204ae6/go.mod h1:Odt/L5e9zO6usa2JJf1fLn+5C40/q55x0wIPXUwD1hY=
-github.com/scriptllh/tfg v0.0.0-20190705150514-c9548703d55a h1:xXkPlV38t96Ndug7hfiZnu48giCBKBL0d+Oaj4jcXFY=
-github.com/scriptllh/tfg v0.0.0-20190705150514-c9548703d55a/go.mod h1:Odt/L5e9zO6usa2JJf1fLn+5C40/q55x0wIPXUwD1hY=
+github.com/scriptllh/tfg v0.0.0-20190706053636-f2c50bc590ef h1:pEWoGgMeQFRxYnp7M9yYGLFZ5VeLSXQV9gXXzz/p6Tk=
+github.com/scriptllh/tfg v0.0.0-20190706053636-f2c50bc590ef/go.mod h1:Odt/L5e9zO6usa2JJf1fLn+5C40/q55x0wIPXUwD1hY=
+github.com/scriptllh/tfg v0.0.0-20190706060430-9dd4a418fbd4 h1:iHjZRrBz6NvOr5q4Kbxs0dQEuhj3kyIUbGvNNIPLtO0=
+github.com/scriptllh/tfg v0.0.0-20190706060430-9dd4a418fbd4/go.mod h1:Odt/L5e9zO6usa2JJf1fLn+5C40/q55x0wIPXUwD1hY=
 github.com/sirupsen/logrus v1.4.2 h1:SPIRibHv4MatM3XXNO2BJeFLZwZ2LvZgfQ5+UNI2im4=
 github.com/sirupsen/logrus v1.4.2/go.mod h1:tLMulIdttU9McNUspp0xgXVQah82FyeX6MwdIuYE2rE=
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=

@@ -5,7 +5,7 @@ TARGET_PKG=$(PROJECT_PKG)
 IMAGE_PREFIX=tfg
 TARGET_IMAGE=$(IMAGE_PREFIX)/$(TARGET):0.0.1
 TARGET_IMAGE_PRD=$(IMAGE_PREFIX)/$(TARGET)-prd:0.0.1
-CMD_PATH="cmd/echo/main.go"
+
 
 all:image
 
@@ -17,7 +17,7 @@ target:
 	mkdir -p $(PROJECT_ROOT)/dist
 	docker run --rm -i -v $(PROJECT_ROOT):/$(PROJECT_PKG) \
 	  -w /$(PROJECT_PKG) golang:1.12.5 \
-      make binary  GITVERSION=`git describe --tags --always --dirty`
+      make binary  GITVERSION=`git describe --tags --always --dirty`  CMD_PATH=cmd/echo/main.go
 
 image:target
 	temp=`mktemp -d` && \
@@ -35,6 +35,25 @@ push-prd:
 
 dev:image clean
 	docker run -it --rm   -p 6000:6000 $(TARGET_IMAGE)  $(TARGET)
+
+
+httptarget:
+	mkdir -p $(PROJECT_ROOT)/dist
+	docker run --rm -i -v $(PROJECT_ROOT):/$(PROJECT_PKG) \
+	  -w /$(PROJECT_PKG) golang:1.12.5 \
+      make binary  GITVERSION=`git describe --tags --always --dirty`  CMD_PATH=cmd/http/main.go
+
+httpimage:httptarget
+	temp=`mktemp -d` && \
+	cp $(PROJECT_ROOT)/dist/$(TARGET) $$temp && cp Dockerfile $$temp && \
+	docker build -t http/$(TARGET_IMAGE) $$temp && \
+	rm -rf $$temp && \
+	make clean
+
+
+http:httpimage clean
+	docker run -it --rm   -p 6000:6000 http/$(TARGET_IMAGE)  $(TARGET)
+
 
 clean:
 	rm -rf dist
